@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, minimum-scale=1.0" />
+	<title></title>
+	<meta name="keywords" content="" />
+	<meta name="description" content="" />
+	<link href="css/style.css?v=m29011418" rel="stylesheet">
+	<link href="css/amsify.suggestags.css?v=m29011418" rel="stylesheet">
+</head>
+	<body>
+		<header>
+			<div class="header-nav">
+				<div class="header-logo">
+				</div>
+				<div class="header-login">
+					<div class="dropdown">
+						<button onclick="myFunction()" class="dropbtn">войти</button>
+							<div id="myDropdown" class="dropdown-content">
+							    <a href=""><span>Как рекрутер</span></a>
+							    <a href=""><span>Как разработчик</span></a>
+							</div>
+						</div>
+					</div>
+			</div>
+			<div class="header-top">
+				<div class="header-top__brand">
+					Getcoder
+					<p class="header-top__brand--slogan">
+						Extraordinary Sourcing Tool
+					</p>
+				</div>
+				<div class="header-top__link">
+						<a href="https://getcoder.com/ru/how"><span>How it works? (30 sec)</span></a>
+				</div>
+			</div>
+				<div class="header-headline">
+					<p>
+						We’ve analyzed the source code of million developers from Github and summarized their real experience and skills
+					</p>
+				</div>
+				<div class="tag-section">
+					<div class="tag-section__countries">
+						<div class="tag-section__countries--list">
+							Поиск по стране:
+						</div>
+							<div class="country-wrapper">
+						        <form action="" class="country-wrapper__choice">
+						            <select id='select-choice' name='select-choice'>
+						                	<option selected='selected' value='russia'>Россия</option>
+						                	<option value="Belarus" data-flag="Belarus">Belarus</option>
+			                                <option value="Canada" data-flag="Canada">Canada</option>
+			                                <option value="Finland" data-flag="Finland">Finland</option>
+			                                <option value="France" data-flag="France">France</option>
+			                                <option value="India" data-flag="India">India</option>
+			                                <option value="Ireland" data-flag="Ireland">Ireland</option>
+			                                <option value="Poland" data-flag="Poland">Poland</option>
+			                                <option value="Portugal" data-flag="Portugal">Portugal</option>
+			                                <option value="UK" data-flag="UK">UK</option>
+			                                <option value="Ukraine" data-flag="Ukraine">Ukraine</option>
+                                			<option value="USA" data-flag="USA">США</option>
+						            </select>
+						        </form>
+    						</div>
+					</div>
+						<div class="tag-section__container">
+							<div class="col-md-3"></div>
+							<div class="col-md-6 text-center">
+								<div class="form-group">
+									<input type="text" class="form-control" name="skill" />
+								</div>
+							</div>
+							<div class="col-md-3"></div>
+							<div class="tag-section__container--button">
+								<a href=""></a>
+							</div>
+						</div>
+				</div>
+		</header>
+			<main>
+				<div class="section-content">
+					<div class="section-content__blocks">
+						<div class="section-content__text">
+							<h1>
+								The engine detects developers' data:
+							</h1>
+							<div class="section-content__text--description">
+								<ul>
+									<li>projects participated</li>
+									<li>using languages and frameworks</li>
+									<li>technologies involved in</li>
+									<li>script fineness</li>
+								</ul>
+							</div>
+						</div>
+						<div class="section-content__img">
+							<img src="img/the-engine-detects-developers-data.png" title="The engine detects developers data">
+						</div>
+					</div>
+					<div class="section-content__blocks--gradient">
+					</div>
+				</div>
+				<div class="section-content">
+					<div class="section-content__blocks">
+						<div class="section-content__text">
+							<h1>
+								Languages And Technologies
+							</h1>
+							<div class="section-content__text--description">
+								<p>
+									GetCoder disposes the information based on actual source code instead developers presentation
+								</p>
+								<p>
+									The information appears even of those developers who have never posted CVs on job platforms.
+								</p>
+							</div>
+						</div>
+						<div class="section-content__img">
+							<img src="img/languages-and-technologies.png" title="Languages And Technologies">
+						</div>
+					</div>
+					<div class="section-content__blocks--gradient">
+					</div>
+				</div>
+			</main>
+<footer>
+	<div class="footer-section">
+		<div class="footer-copyright">
+			© All Rights Reserved, getCoder Inc.
+		</div>
+			<nav class="footer-menu">
+				<ul>
+					<li><a href="">Terms &amp; Conditions</a></li>
+					<li><a href="https://getcoder.com/ru/privacy">Privacy</a></li>
+					<li><a href="https://getcoder.com/ru/team">Team</a></li>
+					<li><a href="mailto:sales@getcoder.io">sales@getcoder.io</a></li>
+				</ul>
+			</nav>
+		</div>
+</footer>
+<script type="text/javascript" src="js/jquery-3.2.1.min.js?version=v29011418"></script>
+<script type="text/javascript" src="js/jquery.amsify.suggestags.js?version=v29011418"></script>
+<script type="text/javascript">
+	jQuery(function($) {
+		$(document).click(function (e){
+		var div = $("#close");
+		if (!div.is(e.target)
+		&& div.has(e.target).length === 0) {
+		div.hide();
+		}
+	});
+});
+</script>
+<script type="text/javascript">
+	$(document).ready(function (){
+        $('select').wrap('<div class="select_wrapper"></div>')
+        $('select').parent().prepend('<span>'+ $(this).find(':selected').text() +'</span>');
+        $('select').parent().children('span').width($('select').width());
+        $('select').css('display', 'none');
+        $('select').parent().append('<ul class="select_inner"></ul>');
+        $('select').children().each(function(){
+            var opttext = $(this).text();
+            var optval = $(this).val();
+            $('select').parent().children('.select_inner').append('<li id="' + optval + '">' + opttext + '</li>');
+        });
+        $('select').parent().find('li').on('click', function (){
+            var cur = $(this).attr('id');
+            $('select').parent().children('span').text($(this).text());
+            $('select').children().removeAttr('selected');
+            $('select').children('[value="'+cur+'"]').attr('selected','selected');
+            console.log($('select').children('[value="'+cur+'"]').text());
+        });
+        $('select').parent().on('click', function (){
+            $(this).find('ul').slideToggle('fast');
+        });
+    });
+    jQuery(function($){
+        $(document).click(function (e){
+            var block = $(".select_wrapper");
+            if (!block.is(e.target)
+                && block.has(e.target).length === 0) {
+                block.find('ul').hide();
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+	var tagsInput = $('input[name="skill"]');
+	var defaultLabel = "Insert skills";
+	tagsInput.attr("placeholder", defaultLabel);
+	var input = tagsInput.amsifySuggestags({
+		type : 'amsify',
+		suggestions: ['php', 'java', 'javascript', 'c++', 'c', 'bitcoin', 'javascriptobj', 'asp', 'phyton'],
+		whiteList: true,
+		keepDefaultLabel: false
+	});
+</script>
+<script type="text/javascript">
+	$(document).ready(function () {
+    $('[shape=poly]').click(function () {
+        $(".hidden").not($("#text-" + $(this).attr("id"))).hide();
+        $("#text-" + $(this).attr("id")).toggle();
+    });
+});
+</script>
+<script>
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+	</body>
+</html>
