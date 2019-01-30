@@ -58,7 +58,7 @@ box-shadow: 0 5px 10px 0 #e2e2e2;
 ul.amsify-list {
 	list-style: none;
     padding:3px 0px 3px 0;
-	height: auto;
+	max-height: 500px;
 	width: 100%;
     overflow-y: auto;
 }
