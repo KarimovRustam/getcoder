@@ -456,6 +456,10 @@ background: red;
     line-height: normal;
     letter-spacing: 0.4px;
     color: #273951;
+
+
+
+    width: 100%;
 }
 .tag-section__container--button a {
     position: absolute;
